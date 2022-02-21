@@ -11,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     private Button btnIniciarThread;
     private int numero;
+    private boolean stopExecucao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +21,14 @@ public class MainActivity extends AppCompatActivity {
         btnIniciarThread = findViewById(R.id.btnIniciarThread);
     }
 
-    public void iniciarThread(View view) {
+    public void startThread(View view) {
+        stopExecucao = false;
         MyThread myThread = new MyThread();
         myThread.start();
+    }
+
+    public void stopThread(View view) {
+        stopExecucao = true;
     }
 
     class MyThread extends Thread {
@@ -30,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             for (int i = 0; i <= 15; i++ ) {
+
+                if (stopExecucao)
+                    return;
 
                 numero = i;
 

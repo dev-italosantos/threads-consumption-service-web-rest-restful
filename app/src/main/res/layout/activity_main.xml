@@ -12,27 +12,34 @@
         android:layout_height="wrap_content"
         android:text="Switch"
         app:layout_constraintBottom_toTopOf="@+id/btnIniciarThread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:layout_editor_absoluteX="136dp" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/btnIniciarThread"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="iniciarThread"
+        android:onClick="startThread"
         android:text="Iniciar Thread"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        tools:layout_editor_absoluteX="127dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnStopThread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnStopThread"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="stopThread"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarThread"
-        tools:layout_editor_absoluteX="157dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarThread" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

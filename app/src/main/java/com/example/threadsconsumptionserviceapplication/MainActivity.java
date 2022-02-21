@@ -15,14 +15,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void iniciarThread(View view) {
-        for (int i = 0; i <= 15; i++ ) {
-            Log.d("Thread", "contador:" + i);
+        MyThread myThread = new MyThread();
+        myThread.start();
+    }
 
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+    class MyThread extends Thread {
+        @Override
+        public void run() {
+            for (int i = 0; i <= 15; i++ ) {
+                Log.d("Thread", "contador:" + i);
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
+            super.run();
         }
     }
 }

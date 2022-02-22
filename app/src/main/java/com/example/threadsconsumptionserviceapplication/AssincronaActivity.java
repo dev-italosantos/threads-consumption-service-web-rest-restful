@@ -23,10 +23,10 @@ public class AssincronaActivity extends AppCompatActivity {
 
     }
 
-    class MyAsyncTask extends AsyncTask<String, Integer, String> {
+    class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
 
         @Override
-        protected String doInBackground(String... strings) {
+        protected String doInBackground(Integer... integers) {
             return null;
         }
     }

@@ -2,6 +2,7 @@ package com.example.threadsconsumptionserviceapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -20,5 +21,13 @@ public class AssincronaActivity extends AppCompatActivity {
 
     private void startAsyncTask(View view) {
 
+    }
+
+    class MyAsyncTask extends AsyncTask<String, Integer, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+            return null;
+        }
     }
 }

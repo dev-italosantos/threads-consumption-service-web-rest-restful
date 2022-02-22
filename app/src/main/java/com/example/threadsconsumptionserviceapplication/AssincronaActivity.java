@@ -24,6 +24,20 @@ public class AssincronaActivity extends AppCompatActivity {
     }
 
     class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+        }
 
         @Override
         protected String doInBackground(Integer... integers) {

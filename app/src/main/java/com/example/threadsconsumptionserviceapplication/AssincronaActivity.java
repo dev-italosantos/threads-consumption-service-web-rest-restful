@@ -21,6 +21,8 @@ public class AssincronaActivity extends AppCompatActivity {
     }
 
     private void startAsyncTask(View view) {
+        MyAsyncTask myAsyncTask = new MyAsyncTask();
+        myAsyncTask.execute(10);
 
     }
 

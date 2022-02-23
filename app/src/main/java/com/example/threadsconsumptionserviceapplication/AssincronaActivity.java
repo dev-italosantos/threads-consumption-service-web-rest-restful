@@ -27,6 +27,7 @@ public class AssincronaActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            progressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -41,7 +42,17 @@ public class AssincronaActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(Integer... integers) {
-            return null;
+            int numero = integers[0];
+
+            for (int i = 0; i < numero; i++) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            return "Finalizado";
         }
     }
 }

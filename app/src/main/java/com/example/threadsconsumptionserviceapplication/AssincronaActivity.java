@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class AssincronaActivity extends AppCompatActivity {
 
@@ -33,6 +34,8 @@ public class AssincronaActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+
+            Toast.makeText(AssincronaActivity.this, s, Toast.LENGTH_SHORT).show();
         }
 
         @Override

@@ -20,7 +20,7 @@ public class AssincronaActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
     }
 
-    private void startAsyncTask(View view) {
+    public void startAsyncTask(View view) {
         MyAsyncTask myAsyncTask = new MyAsyncTask();
         myAsyncTask.execute(10);
 

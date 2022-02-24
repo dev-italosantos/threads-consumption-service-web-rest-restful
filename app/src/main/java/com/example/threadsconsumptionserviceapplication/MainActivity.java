@@ -3,6 +3,7 @@ package com.example.threadsconsumptionserviceapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         stopExecucao = false;
         MyThread myThread = new MyThread();
         myThread.start();
+    }
+
+    public void nextLayout(View view) {
+        Intent intent = new Intent(MainActivity.this, AssincronaActivity.class);
+        startActivity(intent);
     }
 
     public void stopThread(View view) {

@@ -38,11 +38,17 @@ public class AssincronaActivity extends AppCompatActivity {
             super.onPostExecute(s);
 
             Toast.makeText(AssincronaActivity.this, s, Toast.LENGTH_SHORT).show();
+
+            progressBar.setProgress(0);
+            progressBar.setVisibility(View.INVISIBLE);
         }
 
         @Override
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
+
+            progressBar.setProgress(values[0]);
+
         }
 
         @Override
@@ -50,6 +56,7 @@ public class AssincronaActivity extends AppCompatActivity {
             int numero = integers[0];
 
             for (int i = 0; i < numero; i++) {
+                publishProgress(i);
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
